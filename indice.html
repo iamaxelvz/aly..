@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sienna – The Marías</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+             background-image: url('coraline.png');
+            background-size: cover; /* Ajusta la imagen al tamaño de la pantalla */
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 100vh;
+            margin: 0;
+    }
+
+    .card {
+      background: rgba(20, 18, 40, 0.7);
+      backdrop-filter: blur(12px);
+      padding: 45px;
+      border-radius: 30px;
+      text-align: center;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+      width: 320px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #e8dcff;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #b8a9d9;
+      margin-bottom: 35px;
+    }
+
+    button {
+      padding: 15px 35px;
+      font-size: 16px;
+      border: none;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #8f7cec, #c7a8ff);
+      color: #1a102f;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 12px 25px rgba(143, 124, 236, 0.5);
+    }
+
+    button:hover {
+      transform: scale(1.08);
+      box-shadow: 0 18px 35px rgba(199, 168, 255, 0.7);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Sienna</h1>
+    <p>The Marías</p>
+
+     <audio id="audio">
+      <source src="The Marías - Sienna (Visualizer).mp3" type="audio/mpeg">
+    </audio>
+
+    <button onclick="playPause()">▶ Reproducir</button>
+  </div>
+
+  <script>
+    const audio = document.getElementById("audio");
+    const button = document.querySelector("button");
+
+    function playPause() {
+      if (audio.paused) {
+        audio.play();
+        button.textContent = "⏸ Pausar";
+      } else {
+        audio.pause();
+        button.textContent = "▶ Reproducir";
+      }
+    }
+  </script>
+
+</body>
+</html>
